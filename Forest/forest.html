@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeannie | National Forest Application</title>
+    <link rel="stylesheet" href="forest.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Bebas+Neue&family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../J.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="../header-footer/header-menu.js"></script>
+
+    <div id="header-placeholder"></div>
+    
+    <div class="content">
+
+        
+    
+        <div class="project-description">
+            <h3 class="title">National Forest Application</h3>
+
+            <!--be vertical-->
+            <div class="credits">
+                
+                <p>As part of a group project for the 310 course, my team and I developed a client-server web application designed to help users plan camping trips to U.S. National Parks. The application integrates essential features, such as park searches, trip planning, and user collaboration, all while prioritizing accessibility, security, and a polished user experience. The project followed a Scrum-based workflow to ensure efficient and iterative development.</p>
+                <!-- <p>Tech Stack: XCode Iphone Simulator, VSCode, React Native</p> -->
+                <p><strong>Request access for source code!</strong></p>
+                <!--row-->
+                <div class="who">
+                    <div class="vert">
+                        <p><strong style="color: black;"">WHAT: </strong></p>
+                        <p>CSCI 310 (Software Engineering) Group Project</p>
+                    </div>
+                    <div class="vert">
+                        <p><strong style="color: black;"">WHEN: </strong></p>
+                        <p>Spring 2024</p>
+
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <hr>
+    
+        <!--key features-->
+        <div class="key-features">
+            <h3 class="title">Key Features</h3>
+
+            <ol>
+                <li><strong>Search & Explore: </strong>Users can search for parks based on various attributes and explore detailed park information.</li>
+            
+                <li><strong>Favorites Management: </strong>Create, update, and review a personalized list of favorite parks.</li>
+                
+                <li><strong>Collaboration: </strong>Compare favorites with friends and suggest group trips.</li>    
+            
+                <li><strong>Accessibility: </strong></li>Ensures usability for individuals with disabilities and compatibility with Chrome and mobile devices.
+            
+                <li><strong>Secure & Aesthetic: </strong>Implements data protection protocols and features an attractive, user-friendly interface.</li>
+            </ol>
+        </div>
+
+        <div class="tech-stack">
+            <h3 class="title">Technology Stack</h3>
+
+            <!--Frontend: Built with React, leveraging reusable components organized under /site/src/pages and /site/src/components. Styling was implemented with modern libraries like Tailwind CSS and Bootstrap.-->
+
+            <ul>
+                <li><strong>Frontend: </strong>Built with React, leveraging reusable components organized under /site/src/pages and /site/src/components. Styling was implemented with modern libraries like Tailwind CSS and Bootstrap.</li>
+                <li><strong>Backend: </strong>Developed using SpringBoot, with the server-side architecture handling API endpoints and enabling seamless data flow. The backend resides under /src/main and integrates with the frontend for serving dynamic content.</li>
+            </ul>
+        </div>
+
+        <div class="Dev">
+            <h3 class="title">Development Workflow</h3>
+            <ul>
+                <li><strong>Version Control: </strong>Maintained two primary branches: documentation for Scrum process documentation and main for feature development.</li>
+                <li>
+                    <p><strong>Testing & Quality Assurance:</strong></p>
+                    <ul>
+                        <li>Java backend tests using JUnit with coverage analysis via JaCoCo.</li>
+                        <li>React frontend tests using Jest, with detailed coverage reports for quality tracking.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Local Development:</strong></p>
+                    <ul>
+                        <li>Backend: SpringBoot API launched locally using Maven commands.</li>
+                        <li>Frontend: React app served in development mode with live reload enabled.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="deploy">
+            <p>For sprint reviews and stakeholder evaluations, the application runs in a Docker container. This ensures consistency in dependencies and environment setup.</p>    
+        </div>
+
+        <div class="conclusion">
+            <p>This project exemplifies our team's ability to collaborate effectively on a full-stack development initiative, applying best practices in agile development, responsive design, and secure coding. It reflects our commitment to delivering a robust and user-centric product.</p>
+        </div>
+
+        <hr>
+
+        <div class="conclusion">
+            <p>Some snapshots of this web application:</p>
+        </div>
+
+        <div class="space"></div>
+
+        <!--some screenshots of the website-->
+        <div class="pics">
+
+            <div class="img-container">
+                <p><strong>Login/SignUp Page</strong></p>
+                <img src="../forest.jpeg" alt="forest" class="pic">
+            </div>
+        
+            <div class="space"></div>
+
+            <!--search functionality-->
+            <div class="img-container">
+                <p><strong>Search Functionality: Users can search by name, state, activity, and by amenity</strong></p>
+                <img src="search-park.jpeg" alt="search" class="pic">
+            </div>
+
+            <div class="space"></div>
+        
+            <div class="img-container">
+                <p><strong>The application will return the top 10 matches of a search request with the option to load another 10 parks via a Load More button</strong></p>
+                <img src="result.jpeg" alt="result" class="pic">
+            </div>
+
+            <div class="space"></div>
+        
+            <div class="img-container">
+                <p><strong>Parks have additional information that the user can read and make their decision</strong></p>
+                <img src="details.jpeg" alt="details" class="pic">
+            </div>
+        </div>
+    </div>
+
+    <div class="space"></div>
+
+    <script src="../Dock/toolbar.js" defer></script>
+    <div class="smallest-space" style="margin-top: 3%;"></div>
+    <div id="toolbar-container"></div>
+    
+    <div class = "footer">
+        <div class="footer-row">
+            <!--Column 1-->
+            <div class="footer-column1">
+                <h1><strong>Jeannie Jiang ✨</strong></h1>
+                <p>Developed by me in HTML/CSS + JS 👩🏻‍💻</p> <!--fix this spacing-->
+            </div>
+
+            <!--need arrows when hover-->
+            <div class="footer-column">
+                <p><a href="mailto:jeanniej@usc.edu">Email Me.</a></p>
+                <p><a href="https://www.linkedin.com/in/jeanjiang26/" target="_blank">Connect on LinkedIn.</a></p>
+                <p><a href="../Jeannie_Jiang_Resume.pdf" target="_blank">Download My Resume.</a></p>
+                <p><a href="https://github.com/jeanjiang26" target="_blank">View My GitHub.</a></p>
+                <p><a href="https://www.instagram.com/__jeanjiang26" target="_blank">Visit my Instagram.</a></p>
+            </div>
+
+            <!--cross out when hover-->
+            <div class="footer-column">
+                <p><a href="/../index.html">Home.</a></p>
+                <p><a href="../index.html#projects">Projects.</a></p>
+                <p><a href="../Other/other-work.html">Other Work.</a></p>
+                <p><a href="../About/about.html">About Me.</a></p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

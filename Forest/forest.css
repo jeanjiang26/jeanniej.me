@@ -1,0 +1,155 @@
+.content {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.project-description h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.credits p, .deploy p, .conclusion p{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.img-container p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #333;
+}
+.who {
+    display: flex;
+    gap: 10%;
+}
+.project-description {
+    display: flex;
+    gap: 10%;
+}
+.key-features p, ul, ol, li, h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.key-features h3 {
+    text-decoration: underline;
+}
+.pics img{
+    width: 550px;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+.pics img:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+.img-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.space {
+    margin-top: 50px;
+}
+#header-placeholder {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+@media (max-width: 600px){
+    .who {
+        flex-direction: column;
+    }
+    .project-description {
+        flex-direction: column;
+    }
+    .img-container {
+        margin-top: 20px;
+    }
+    .pics img {
+        width: 100%;
+    }
+    .space {
+        margin-top: 20px;
+    }
+    .project-description h3 {
+        font-size: 20px !important;
+        text-align: center;
+    }
+    .key-features p, ul, ol, li, h3{
+        font-size: 16px !important; 
+    }
+    .credit p {
+        font-size: 16px !important;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    p {
+        font-size: 16px !important;
+    }
+    
+    
+}
+@media (max-width: 450px){
+    .project-description {
+        flex-direction: column;
+    }
+    .who {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 30px !important;
+        text-align: center;
+    }
+    .key-features p, ul, ol, li, h3{
+        font-size: 16px !important; 
+    }
+    .credit p {
+        font-size: 16px !important;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    p {
+        font-size: 16px !important;
+    }
+    
+}
+@media (max-width: 800px){
+    .project-description {
+        flex-direction: column;
+    }
+    .who {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .credits p {
+        font-size: 20px;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+
+}
+@media (max-width: 1050px){
+    .project-description {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        text-align: center;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

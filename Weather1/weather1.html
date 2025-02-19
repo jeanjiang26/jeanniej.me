@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeannie | Weather App 1</title>
+    <link rel="stylesheet" href="weather1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Bebas+Neue&family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../J.jpg" type="image/x-icon">
+    
+</head>
+
+<body>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="../header-footer/header-menu.js"></script>
+
+    <script src="../Dock/toolbar.js" defer></script>
+
+    <div id="header-placeholder"></div>
+
+    <div class="content">
+
+        
+
+        <div class="project-description">
+        <h3 class="title">Weather Search</h3>
+
+        <!--be vertical-->
+        <div class="credits">
+            
+            <p>I developed a web application using <strong>Python and the Flask framework</strong> to perform server-side scripting, integrating the Tomorrow.io API to retrieve and display weather data. The webpage allows users to search for weather information, with results presented in both card and tabular formats, along with detailed daily weather insights. </p>
+            <p>This project involved gaining hands-on experience with Python, Flask, Google APIs, Tomorrow.io API, and HighCharts Service. It emphasized creating dynamic web pages with <strong>HTML, CSS, JavaScript, DOM manipulation, JSON handling, and XMLHttpRequest objects</strong>. Additionally, I worked with <strong>JSON parsers</strong> in both Python and JavaScript and deployed the backend on <strong>AWS</strong> providing practical cloud development experience.  </p>
+                
+            <p>The project offered valuable exposure to web development, cloud deployment, and API integration.</p>
+
+            <p>Request access for source code!</p>
+
+            <!--row-->
+            <div class="who">
+                <div class="vert">
+                    <p><strong style="color: black;">WHO: </strong></p>
+                    <p>Me!</p>
+
+                </div>
+                <div class="vert">
+                    <p><strong style="color: black;"">WHEN: </strong></p>
+                    <p>Fall 2024</p>
+
+                </div>    
+            </div>
+        </div>
+
+
+        </div>
+
+        <hr>
+
+        <h4>Search Form</h4>
+        <div class="search-image-container">
+            <img src="search-form.jpeg" alt="Search Form">
+        </div>
+
+        <div class="small-space"></div>
+
+        <h4>Search Form Functionality for Weather Information Retrieval</h4>
+        <p>The web application includes a dynamic search form that provides weather information based on user input or geolocation. When the user opens the webpage (e.g., weather.html), they can choose to fetch their geolocation using the ipinfo.io API by selecting the location checkbox.</p> 
+        <p>If this checkbox is checked, the fields for Street, City, and State are cleared and disabled. Otherwise, the user can manually enter their Street, City, and State to search for weather details.</p>
+        
+        <p>The search form features two buttons:</p>
+        <ul>
+            <li><strong>SUBMIT</strong> Button: Clicking this button triggers a search for the specified location. If valid input is provided, the client-side JavaScript sends a GET request with the form data to the Python Flask backend. The backend retrieves the inputs, sends them to the Tomorrow.io API, and returns the weather information. If the form is submitted without providing required input (Street, City, or State) or checking the location checkbox, an error tooltip highlights the missing fields.</li>
+            <li><strong>CLEAR</strong> Button: This button clears the result area and resets all fields in the search form to their default values. The CLEAR functionality is implemented using a JavaScript function.</li>
+        </ul>
+
+
+        <div class = "searches">
+
+            <div class="valid">
+                <img src="valid.jpeg" alt="Valid Search">
+                <p>An Example of a Valid Search</p>
+            </div>
+
+            <div class="invalid">
+                <img src="invalid.jpeg" alt="Invalid Search">
+                <p>An Example of an Invalid Search: Users are reminded of missing or invalid search fields</p>
+            </div>
+        </div>
+
+        <div class="small-space"></div>
+        
+
+
+
+        <h4>Geocoding & Weather Data Retrieval</h4>
+
+
+        <p>There are 2 ways for users to search for weather information: Traditional Street Address or IP Address</p>
+        
+        
+        <p>The application displays weather results by leveraging form inputs to construct RESTful API calls to the Tomorrow.io service.</p>
+        
+        <p>If the user enters Street, City, and State information, the client JavaScript first geocodes the address using the Google Maps Geocoding API. This API converts the address into geolocation coordinates required for the weather query. The Google Maps Geocoding API expects the following parameters:</p>
+        <ul>
+            <li><strong>Address:</strong> The street address formatted according to the national postal service standards. </li>
+            <li><strong>Key:</strong> Application's API key</li>
+        </ul>
+
+        <p>The geocoding response includes the latitude and longitude, which are then used to query the Tomorrow.io API.</p>
+
+
+        <p>The Tomorrow.io API Retrieve Timelines service retrieves weather data based on these coordinates. The API requires the following parameters:
+
+        <ul>
+            <li><strong>apiKey:</strong> Authentication key for managing access and quotas.</li>
+            <li><strong>locations</strong>: Geolocation coordinates (latitude and longitude)</li>
+            <li><strong>fields:</strong> Weather attributes such as temperature, temperatureApparent, temperatureMin, temperatureMax, windSpeed, windDirection, humidity, pressureSeaLevel, uvIndex, weatherCode, precipitationProbability, precipitationType, sunriseTime, sunsetTime, visibility, moonPhase, and cloudCover.</li>
+            <li><strong>timesteps:</strong> Data granularity, such as 1h for hourly data or 1d for daily summaries.</li>
+            <li><strong>timezone:</strong> Time zone for the data, using "America/Los_Angeles."</li>
+            <li><strong>units:</strong> Measurement units, set to "imperial."</li>
+        </ul>
+
+        <p>The Python Flask backend handles these API requests, processes the JSON responses, and extracts relevant weather details. The extracted data is sent to the frontend in JSON format, where JavaScript further processes it for display.</p>
+
+        <div class="search-address-container">
+            <img src="address-search.jpeg" alt="Address Search">
+            <p>Example of a valid address search</p>
+        </div>
+
+        <div class="small-space"></div>
+
+        <p>Once a valid search is made, these 2 html cards will be displayed below:</p>
+        <div class="search-address-container">
+            <img src="result-card1.jpeg" alt="Address Search">
+            <p>First output of a valid address search</p>
+        </div>
+        <div class="small-space"></div>
+        <div class="search-address-bigger-container">
+            <img src="table-result.jpeg" alt="Address Search">
+            <p>Second ouput of a valid address search</p>
+        </div>
+
+        <p>The table result displays weather results for the next 5-6 days, including the search day</p>
+
+        <div class="small-space"></div>
+
+        <h4>Displaying Detailed Summary of the Weather</h4>
+        <p>In the search results table, clicking on a record's date displays a detailed breakdown of the daily weather. The detailed information is fetched using the same API parameters as the initial request, leveraging the Tomorrow.io API to retrieve JSON data. The page dynamically populates a dedicated section with this detailed weather data for seamless user interaction.</p>
+
+        <div class="search-address-container">
+            <img src="daily-details.jpeg" alt="Address Search">
+        </div>
+
+        <p>Below the Daily Weather Detail, an hourly weather chart is available but hidden by default. Users can toggle the visibility of the "Weather Charts" section by clicking a button which expands the chart when clicked if hidden, or collapse it if already open, enabling seamless control over the display.</p>
+        
+        <!--magnifier effect-->
+        <div class="charts-container">
+            <img src="weather-charts.jpeg" alt="Address Search">
+            <div id="magnifier"></div>
+        </div>
+        
+        <script src=weather1.js"></script>
+
+        <div class="small-space"></div>
+
+        <h4>Highcharts API Service</h4>
+        <p>I created a temperature range (Min, Max) weather chart using the Highcharts API. The chart dynamically displays daily temperature trends over a 5-day period, starting from the current day. This visualization highlights temperature fluctuations and provides an interactive way to explore weather patterns.</p>    
+    
+        <p>The second chart is an interactive hourly meteogram for the next 5 days using data from the Tomorrow.io API. The chart displays hourly weather trends starting from the current time, providing a detailed view of weather changes over a 5-day period. Data is retrieved dynamically through API calls to ensure accurate and up-to-date visualization.</p>
+    
+    
+    
+    </div>
+
+    <div class="smallest-space" style="margin-top: 3%;"></div>
+    
+    <div id="toolbar-container"></div>
+
+    
+    
+    <div class = "footer">
+        <div class="footer-row">
+            <!--Column 1-->
+            <div class="footer-column1">
+                <h1><strong>Jeannie Jiang ✨</strong></h1>
+                <p>Developed by me in HTML/CSS + JS 👩🏻‍💻</p> <!--fix this spacing-->
+            </div>
+
+            <!--need arrows when hover-->
+            <div class="footer-column">
+                <p><a href="mailto:jeanniej@usc.edu">Email Me.</a></p>
+                <p><a href="https://www.linkedin.com/in/jeanjiang26/" target="_blank">Connect on LinkedIn.</a></p>
+                <p><a href="../Jeannie_Jiang_Resume.pdf" target="_blank">Download My Resume.</a></p>
+                <p><a href="https://github.com/jeanjiang26" target="_blank">View My GitHub.</a></p>
+                <p><a href="https://www.instagram.com/__jeanjiang26" target="_blank">Visit my Instagram.</a></p>
+            </div>
+
+            <!--cross out when hover-->
+            <div class="footer-column">
+                <p><a href="/../index.html">Home.</a></p>
+                <p><a href="../index.html#projects">Projects.</a></p>
+                <p><a href="../Other/other-work.html">Other Work.</a></p>
+                <p><a href="../About/about.html">About Me.</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    
+    </body>
+
+</html>

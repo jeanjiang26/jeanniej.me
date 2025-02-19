@@ -1,0 +1,110 @@
+
+.header {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
+    font-family: 'Ariel', sans-serif;
+
+    flex-wrap: wrap;
+   
+}
+
+
+/* .header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Ariel', sans-serif;
+    flex-wrap: wrap;
+    align-items: center;
+} */
+
+.menu-button {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+.name-flower{
+    display: flex;
+}
+.name-flower img {
+    width: 8em;
+    height: 4em;
+}
+.header-links a {
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px; 
+    font-family: 'Quicksand', sans-serif;
+   
+}
+
+.header-links a:hover {
+    color: darkgray; 
+}
+.name-flower a{
+    color: black;
+    text-decoration: none;
+    margin-right: 3%;
+}
+.name-flower a:hover{
+    color: #990000;
+}
+.header-space {
+    margin-bottom: 45px;
+}
+
+@media (max-width: 600px){
+    .header-links a{
+        font-size: 16px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .header-links {
+        display: flex;
+        flex-direction: row; /* Align items horizontally */
+        gap: 40px; /* Adds spacing between links */
+        position: absolute; /* Allows movement */
+        top: -100px; /* Start hidden above the viewport */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Centering trick */
+        background-color: transparent; /* Removes background */
+        padding: 10px 0; 
+        font-size: 16px; /* Adjust font size */
+        font-weight: bold; /* Makes text bold */
+        text-transform: uppercase; /* Matches the style */
+        color: gray; /* Matches the gray text */
+        align-items: center;
+        opacity: 0; /* Start hidden */
+        transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        white-space: nowrap;
+    }
+    
+    .header-links.show {
+        top: 60px; /* Moves into visible position */
+        opacity: 1;
+    }
+}
+
+@media (max-width: 400px){
+    .header-links a{
+        font-size: 15px;
+    }
+}

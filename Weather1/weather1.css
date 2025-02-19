@@ -1,0 +1,223 @@
+.who {
+    display: flex;
+    gap: 10%;
+}
+.project-description {
+    display: flex;
+    gap: 10%;
+}
+.project-description h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.credits p{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+/* body {
+    margin-left: 10%;
+    margin-right: 10%;
+} */
+.content {
+    /* margin-left: 5%;
+    margin-right: 5%; */
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#header-placeholder {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.content h4{
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #333;
+    
+}
+.content li{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #4a4a4a;
+}
+.content p{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #4a4a4a
+}
+.search-image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.search-image-container img {
+    max-width: 40%; /* Ensure the image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+.searches img {
+    height: auto;
+    width: 40%;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 15px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+.searches {
+    /* display: flex; */
+    gap: 10%; /* Space out the images */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    justify-content: center; /* Center horizontally */
+}
+.small-space{
+    margin-top: 5%;
+}
+.search-address-container{
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    text-align: center;
+}
+.search-address-container img {
+    max-width: 40%; /* Ensure the image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+.search-address-bigger-container{
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    text-align: center;
+}
+.search-address-bigger-container img{
+    max-width: 40%; /* Ensure the image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+.charts-container {
+   
+    width: 100%; /* Adjust the container's width */
+    height: auto; /* Automatically scale with the image */
+    overflow: hidden; /* Hide overflow for the magnifier */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.charts-container img {
+    width: 60%; /* Ensure the image fits the container */
+    height: auto;
+}
+
+#magnifier {
+    position: absolute;
+    border: 3px solid #990000; /* Magnifier border color */
+    border-radius: 50%; /* Circular magnifier */
+    width: 100px; /* Magnifier size */
+    height: 100px;
+    display: none; /* Hidden by default */
+    overflow: hidden; /* Clip overflowing content */
+    pointer-events: none; /* Allow mouse events to pass through */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#magnifier img {
+    position: absolute;
+    width: 200%; /* Magnified image size (adjust zoom level) */
+    height: auto;
+}
+
+@media (max-width: 600px){
+    .who {
+        flex-direction: column;
+    }
+    .project-description {
+        flex-direction: column;
+    }
+    .searches {
+        flex-direction: column;
+    }
+    .valid img{
+        width: 80%;
+    }
+    .invalid img{
+        width: 80%;
+    }
+    .credits p, .content p, .content li{
+        font-size: 17px;
+    }
+    .content h4 {
+        font-size: 17px;
+    }
+    .content h4 {
+        font-size: 20px;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media (max-width: 800px){
+    .project-description, .searches {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .credits p, .content p, .content li{
+        font-size: 17px;
+    }
+    .valid img{
+        width: 80%;
+    }
+    .invalid img{
+        width: 80%;
+    }
+    .content h4 {
+        font-size: 20px;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+}
+@media (max-width: 1050px) {
+    .project-description, .searches {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .credits p, .content p, .content li{
+        font-size: 17px;
+    }
+    .valid img{
+        width: 80%;
+    }
+    .invalid img{
+        width: 80%;
+    }
+    .content h4 {
+        font-size: 20px;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeannie | RedPL</title>
+    <link rel="stylesheet" href="first-solar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Bebas+Neue&family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../J.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="../header-footer/header-menu.js"></script>
+
+    <div id="header-placeholder"></div>
+
+    <div class="content">
+
+        <div class="project-description">
+            <h3 class="title">REDPL SOFTWARE</h3>
+
+            <!--be vertical-->
+            <div class="credits">
+                <p>I created RedPL software to streamline data acquisition from a Thorlabs spectrometer. The software includes a user-friendly interface, reliable error handling, and a reporting feature that exports normalized spectral data for real-time analysis.</p>
+                <p>Special shoutout to Mike Hu, Guofeng Yin for their mentorship and help!</p>
+
+                <!--row-->
+                <div class="who">
+                    <div class="vert">
+                        <p><strong style="color: black;">WHAT: </strong></p>
+                        <p>Internship Project @ First Solar</p>
+
+                    </div>
+                    <div class="vert">
+                        <p><strong style="color: black;">WHEN: </strong></p>
+                        <p>Summer 2024</p>
+
+                    </div>    
+                </div>
+            </div>
+            
+        </div>  
+
+        <hr>
+
+
+        <p name = "implementation">System Theory</p>
+        <p name ="paragraphs">The Red PL tool utilizes <strong>photoluminescence (PL) spectrometry </strong>to determine the bandgap and assess the quality of a solar cell coupon. In this process, a laser illuminates the coupon, exciting electrons from the valence band, where they are at lower energy, to the conduction band, where they can move freely and conduct current. The bandgap (Eg) is defined as the energy difference between the highest energy level of the valence band and the lowest energy level of the conduction band. As the excited electrons relax back to the valence band, they emit photons with energies corresponding to the material's bandgap.</p>
+
+        <div class="smaller-space"></div>
+
+        <p name = "implementation">How Data Are Interpreted​</p>
+        <p name ="paragraphs">The emitted light is collected by the spectrometer to produce a <strong>spectrum</strong>, which displays the intensity of the light as a function of energy (eV) or wavelength (nm). The peak of the photoluminescence (PL) emission corresponds to the material's bandgap energy. A strong, sharp, and well-defined PL peak signifies a high-quality material with minimal defects. Additionally, a narrower full width at half maximum (FWHM) indicates uniformity and a well-defined bandgap energy level, which are characteristic of higher material quality.</p>
+        
+        <div class="smaller-space"></div>
+
+        <p name = "implementation">Hardware Setup of the Red PL System​</p>
+
+        <div name="hardware-pictures">
+            <img src="FS-Hardware1.png" alt="Hardware Setup" class="small-image">     
+            <img src="FS-Hardware2.jpeg" alt="Hardware Setup" class="small-image">     
+            <img src="FS-Hardware3.jpeg" alt="Hardware Setup" class="small-image">
+        </div>
+        <p name ="paragraphs"><strong>Figure 1:</strong> Hardware setup of the Red PL system, featuring a Thorlabs spectrometer, a laser, and a solar cell coupon.</p>
+        <p name ="paragraphs"><strong>Figure 2:</strong> Close-up of the Thorlabs spectrometer, which collects the emitted light from the solar cell coupon.</p>
+        <p name ="paragraphs"><strong>Figure 3:</strong> Close-up of the laser, which excites electrons in the solar cell coupon to emit light.</p>
+
+        <div class="smaller-space"></div>
+
+        <p name = "implementation">Thorlab (Vendor) Generic Software</p>
+        <p name ="paragraphs">The ThorSpectra program provided by the vendor was previously used to obtain raw scan data. However, the software has <strong>several limitations: it lacks a data fitting feature to display the peak and full width at half maximum (FWHM), does not include a data uploading feature, and offers no calibration functionality.</strong></p>
+
+        <div class="smaller-space"></div>
+
+        <p name = "implementation">New Software Requirements​</p>
+        <p name ="paragraphs">The initial software is designed to overcome the limitations of the vendor's software by incorporating the following features:</p>
+        <ul>
+            <li name="list-items"><strong>Data Acquisition:</strong> Similar to ThorSpectra, it enables the collection of raw intensity versus wavelength data, which is presented both graphically and in a CSV file format.</li>
+            <li name="list-items"><strong>Data Processing:</strong> This includes new functionalities such as calibrating intensity data using a premade CSV calibration file, performing Gaussian fitting on the curve, and determining the peak and full width at half maximum (FWHM), which are displayed next to the graph.</li>
+            <li name="list-items"><strong>Data Reporting:</strong> A new feature that allows the software to automatically upload all data, including input parameters and fitted results, to the SQL database upon clicking the save button.</li>
+        </ul>
+
+        <div class="smaller-space"></div>
+
+        <h2 name = "implementation-section"><strong>IMPLEMENTATION</strong></h2>
+
+        <div class="smaller-space"></div>
+        <p name = "implementation">New Software Design (Technology Stack)</p>
+        <img src="software-design.png" alt="Software Design" class="center-image">
+
+        <div class="smaller-space"></div>
+        <p name = "implementation">Initial Landing Page​</p>
+        <img src="initial-page.jpeg" alt="Software Design" class="center-image">
+
+        <div class="smaller-space"></div>
+
+        <p name = "implementation">Input Parameters</p>
+        <img src="input.jpeg" alt="Software Design" class="input-img">
+
+        <div class="input-parameters">
+            <!--parameters text-->
+            <!-- <h2>Input Parameters:</h2> -->
+            <ul>
+                <li>
+                <strong>OD Filter</strong>
+                <ul>
+                    <li>0, 1, 2, No Filter Options</li>
+                    <li>Dropdown menu</li>
+                </ul>
+                </li>
+                <li>
+                <strong>Laser Power</strong>
+                <ul>
+                    <li>Operator manually input</li>
+                    <li>Type: Double</li>
+                </ul>
+                </li>
+                <li>
+                <strong>Coupon ID</strong>
+                <ul>
+                    <li>Scanner automatically inputs coupon ID</li>
+                </ul>
+                </li>
+                <li>
+                <strong>Cell ID</strong>
+                <ul>
+                    <li>Operator manually input</li>
+                    <li>Type: Int</li>
+                </ul>
+                </li>
+                <li>
+                <strong>Stress Time</strong>
+                <ul>
+                    <li>Operator manually input</li>
+                    <li>Type: Int</li>
+                </ul>
+                </li>
+                <li>
+                <strong>Integration Time (Seconds)</strong>
+                <ul>
+                    <li>Numeric Up/Down Button</li>
+                </ul>
+                </li>
+                <li>
+                <strong>Load Calibration</strong>
+                <ul>
+                    <li>Loads a CSV file with calibration data</li>
+                </ul>
+                </li>
+                <li>
+                <strong>RDB Number</strong>
+                <ul>
+                    <li>Type: String</li>
+                </ul>
+                </li>
+            </ul>
+
+            <!--parameters image-->
+            <div class="parameters-img">
+                <img src="OD.jpeg" alt="Software Design" class="small-image">
+                <img src="save.jpeg" alt="Software Design" class="small-image">
+            </div>
+            
+
+        </div>
+
+        <h2 id = "implementation-error">Error Checking and Handling​</h2>
+
+        <p name="paragraphs">If any parameters are missing, a pop-up message will show up notifying the operator which parameters are missing</p>
+        <img src="missing.jpeg" alt="Software Design" class="missing-param-img">
+            
+        <div name ="missing-param2">
+            <p name="paragraphs">Specific error handing for Cell ID and Stress Time​:</p>
+            <li name="param-list">Cell ID must be an int between 1 and 9, inclusive​</li>
+            <li name="param-list">Stress Time must be a value between -1 and 100​</li>
+
+            <!--images-->
+            <div name="missing-param-images">
+                <img src="cell-ID.jpeg" alt="Software Design" class="missing-image">
+                <img src="stress-time.jpeg" alt="Software Design" class="missing-image">
+            </div>
+
+        </div>
+
+        <div class="smaller-space"></div>
+
+        <!--More than 1 Scan-->
+
+        <p name = "implementation">More than 1 Scan​​</p>
+        <p class="margin-left-5" style="font-weight: 100;">Every time a successful scan is completed, that data will be saved alphabetically under one of these dropdown buttons on the tool bar</p>
+        <ul class="margin-left-5">
+            <li>First scan = A</li>
+            <li>Second scan = B​</li>
+            <li>Third scan = C</li>
+        </ul>
+        <p class="margin-left-5" style="font-weight: 100;">The buttons will auto-generate once the operator scans more than 3 times to include the next letter “D” and so on.</p>
+
+        <img src="scan-bar.png" alt="Software Design" class="center-image">
+
+        <div class="smaller-space"></div>
+
+        <!--Plotting Averages by 10, 20, 50​-->
+        <p name = "implementation">Plotting Averages by 10, 20, 50​</p>
+        <p class="margin-left-5"style="font-weight: 100;">The tool will automatically plot the average of the last 10, 20, and 50 scans. The operator can select which average they would like to view by clicking on the corresponding button.</p>
+
+        <img src="plot-avg.png" alt="Software Design" class="center-image">
+
+        <!--Change Wavelength (X-Axis) Units from nm to eV ​-->
+        <p name = "implementation">Change Wavelength (X-Axis) Units from nm to eV​</p>
+        <div class ="wavelength-units">
+            <p class="margin-left-5" style="font-weight: 100;">The operator can change the units of the x-axis from nm to eV by clicking on the corresponding button.</p>
+            <img src="avg-toolbar.jpeg" alt="Software Design" class="small-image">
+        </div>
+        
+        <div class="avg-img">
+            <img src="avg-graph.jpeg" alt="Software Design" class="center-image">
+        </div>
+
+        <div class="smaller-space"></div>
+
+        <!--Normalize Graph Data​-->
+        <p name = "implementation">Normalize Graph Data​</p>
+        <p class="margin-left-5" style="font-weight: 100;">The operator can normalize the graph data by clicking on the corresponding button.</p>
+        <img src="normalize.png" alt="Software Design" class="center-image">
+
+        <div class="smaller-space"></div>
+
+        <p name = "implementation">Saving the Data as a CSV File​​</p>
+
+        <p class="margin-left-5" style="font-weight: 100;">Operator can input any additional notes for this scan (Notes are optional)</p>
+        <img src="save-btn.png" alt="Software Design" class="csv-btn-img">
+        
+        <p class="margin-left-5" style="font-weight: 100;">When the Save button is clicked, there will be a pop up that automatically saves the file titled in the following convention:​ RDB#_SS_OD#_IntegrationTime​</p>
+
+        <!--tbd display-->
+        <div class="save-btn-img">
+            <img src="save-file.jpeg" alt="Software Design" class="save-image">
+            <img src="save-conf.png" alt="Software Design" class="small-image">
+        </div>
+    
+        <div class="smaller-space"></div>
+
+        <!--Saved CSV File​-->
+        <p name = "implementation">Saved CSV File​</p>
+        <img src="csv.jpeg" alt="Software Design" class="medium-img">
+        <p class="margin-left-5">When the Save button is clicked, the data will be saved in the following format:</p>
+
+        <p class="margin-left-5" style="font-weight: 100;">Header Row: </p>
+        <ol class="margin-left-5" style="font-weight: 100;">Parameters entered by operator: RDB, OD#, Laser Power, Integration Time, CouponID, CellID, StressTime​</ol>
+        <ol class="margin-left-5" style="font-weight: 100;">Calculated Data: Peak Position (wavelength at max intensity), Peak Intensity, FWHM, Notes​</ol>
+
+        <p class="margin-left-5" style="font-weight: 100;">ScanData = raw data​</p>
+        <p class="margin-left-5"style="font-weight: 100;">CalibratedData = ScanData x CalibrationFactor​</p>  
+        <p class="margin-left-5"style="font-weight: 100;">FittedData = Gaussian-fitted data</p>
+
+        <div class="smaller-space"></div>
+
+        <p name = "implementation">Loading Data to Database​​</p>
+        <p class="margin-left-5" style="font-weight: 100;">When operator clicks to save their data as a CSV file, the software simultaneously uploads the data into the CTC database</p>
+        <p class="margin-left-5" style="font-weight: 100;">If there any exceptions when uploading data to database, it is logged as an event to a log file</p>
+        <p class="margin-left-5" style="font-weight: 100;">Logging has rolling interval of 1 day​</p>
+        <p class="margin-left-5" style="font-weight: 100;">A new folder will be generated every month and a new file will be made everyday​</p>
+
+        <img src="logging.jpeg" alt="Software Design" class="center-image">
+        <img src="logged-files.jpeg" alt="Software Design" class="center-image">
+
+        <div class="smaller-space"></div>
+
+        <p name = "implementation">SQL Database​</p>
+        <p class="margin-left-5" style="font-weight: 100;">SQL database schema for the RedPL software</p>
+        <img src="sql.jpg" alt="Software Design" class="center-image">
+
+        <div class="smaller-space"></div>
+
+    </div>
+
+    <div class="smallest-space"></div>
+    <script src="../Dock/toolbar.js" defer></script>
+    
+    <div id="toolbar-container"></div>
+
+    <div class = "footer">
+        <div class="footer-row">
+            <!--Column 1-->
+            <div class="footer-column1">
+                <h1><strong>Jeannie Jiang ✨</strong></h1>
+                <p>Developed by me in HTML/CSS + JS 👩🏻‍💻</p> <!--fix this spacing-->
+            </div>
+
+            <!--need arrows when hover-->
+            <div class="footer-column">
+                <p><a href="mailto:jeanniej@usc.edu">Email Me.</a></p>
+                <p><a href="https://www.linkedin.com/in/jeanjiang26/" target="_blank">Connect on LinkedIn.</a></p>
+                <p><a href="../Jeannie_Jiang_Resume.pdf" target="_blank">Download My Resume.</a></p>
+                <p><a href="https://github.com/jeanjiang26" target="_blank">View My GitHub.</a></p>
+                <p><a href="https://www.instagram.com/__jeanjiang26" target="_blank">Visit my Instagram.</a></p>
+            </div>
+
+            <!--cross out when hover-->
+            <div class="footer-column">
+                <p><a href="/../index.html">Home.</a></p>
+                <p><a href="../index.html#projects">Projects.</a></p>
+                <p><a href="../Other/other-work.html">Other Work.</a></p>
+                <p><a href="../About/about.html">About Me.</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>

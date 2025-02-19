@@ -1,0 +1,159 @@
+.content {
+    margin-left: 15%;
+    margin-right: 15%;
+    /* background-color: #F8F9FA;  */
+ 
+}
+content p, ul, li, ol{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.who {
+    display: flex;
+    gap: 10%;
+}
+.project-description {
+    display: flex;
+    gap: 10%;
+}
+.project-description h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.credits p{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+}
+.scope p{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+
+}
+
+#header-placeholder {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.space {
+    margin-top: 50px;
+}
+.img1 img{
+    width: 800px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #000;
+    max-width: 90%;
+}
+@media (max-width: 450px) {
+    .credits p, .who p {
+        font-size: 17px !important; /* Adjust the font size for smaller screens */
+    }
+    ul, ol, li {
+        font-size: 17px !important; /* Adjust the font size for smaller screens */
+    }
+    .scope p {
+        font-size: 17px !important; /* Adjust the font size for smaller screens */
+    }
+    .space {
+        margin-top: 20px; /* Adjust the margin for smaller screens */
+    }
+
+    .img1 img {
+        width: 100%; /* Make images full width on smaller screens */
+        border: 1px solid #000; /* Adjust the border size for smaller screens */
+    }
+    .project-description {
+        flex-direction: column;
+    }
+    .who {
+        flex-direction: column;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .credits p {
+        font-size: 17px; /* Adjust the font size for smaller screens */
+    }
+    ul, ol, li {
+        font-size: 17px; /* Adjust the font size for smaller screens */
+    }
+    .scope p {
+        font-size: 17px; /* Adjust the font size for smaller screens */
+    }
+    .space {
+        margin-top: 20px; /* Adjust the margin for smaller screens */
+    }
+
+    .img1 img {
+        width: 100%; /* Make images full width on smaller screens */
+        border: 1px solid #000; /* Adjust the border size for smaller screens */
+    }
+    .project-description {
+        flex-direction: column;
+    }
+    .who {
+        flex-direction: column;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .title {
+        text-align: center;
+    }
+}
+@media (max-width: 800px){
+    .project-description {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .credits p {
+        font-size: 20px;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media (max-width: 1050px) {
+    .project-description {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        text-align: center;
+        font-size: 38px;
+    }
+    .credits p {
+        font-size: 25px;
+    }
+    ul, ol, li {
+        font-size: 25px; /* Adjust the font size for smaller screens */
+    }
+    .scope p {
+        font-size: 25px; /* Adjust the font size for smaller screens */
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

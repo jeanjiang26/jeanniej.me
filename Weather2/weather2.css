@@ -1,0 +1,258 @@
+
+.who {
+    display: flex;
+    gap: 10%;
+}
+.project-description {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    
+}
+.content {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.project-description h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    white-space: nowrap;
+    font-weight: 700;
+    /* margin-top: 0; 
+    padding-top: 0;  */
+}
+.credits p{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.intro p, li, ol, ul{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.initial-landing img {
+    width: 90%;
+    height: auto;
+    display: block;
+    /* display: block; Block-level elements take up the full width available */
+    margin-left: auto;
+    margin-right: auto;
+}
+.initial-landing p, li, ol, ul{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.initial-landing h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #333;
+}
+.results-tab p, li, ol, ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.results-tab h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #333;
+}
+.results-tab img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.favorites p, li, ol, ul{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.favorites h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #333;
+}
+.favorites img{
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Details-Pane p, li, ol, ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.Details-Pane h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #333;
+}
+.Details-Pane img{
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Mobile p{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+.gap {
+    margin-top: 5%;
+}
+.links a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent element */
+}
+
+.links a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+#header-placeholder {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+@media (max-width: 600px){
+    .project-description {
+        flex-direction: column;
+    }
+    .who {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .credits p {
+        font-size: 17px;
+    }
+    .intro h4{
+        font-size: 20px;
+    }
+    .intro p, li, ol, ul {
+        font-size: 17px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    .Details-Pane p, li, ol, ul {
+        font-size: 17px;
+    }
+    .Mobile p {
+        font-size: 17px;
+    }
+    .initial-landing p, li, ol, ul{
+        font-size: 17px;
+    }
+    .results-tab p, li, ol, ul {
+        font-size: 17px;
+    }
+    .favorites p, li, ol, ul {
+        font-size: 17px;
+    }
+    .initial-landing h3, .results-tab h3, .favorites h3, .Details-Pane h3 {
+        font-size: 20px;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 800px){
+    .project-description {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .project-description h3, .initial-landing h3, .results-tab h3, .favorites h3, .Details-Pane h3 {
+        font-size: 20px;
+    }
+    .credits p {
+        font-size: 17px;
+    }
+    .project-description h3 {
+        font-size: 25px;
+    }
+    .Details-Pane p, li, ol, ul {
+        font-size: 17px;
+    }
+    .Mobile p {
+        font-size: 17px;
+    }
+    .initial-landing p, li, ol, ul{
+        font-size: 17px;
+    }
+    .results-tab p, li, ol, ul {
+        font-size: 17px;
+    }
+    .favorites p, li, ol, ul {
+        font-size: 17px;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 1050px){
+    .project-description {
+        flex-direction: column !important;
+    }
+    /* .who {
+        flex-direction: column;
+    } */
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .Details-Pane p, li, ol, ul {
+        font-size: 17px;
+    }
+    .Mobile p {
+        font-size: 17px;
+    }
+    .initial-landing p, li, ol, ul{
+        font-size: 17px;
+    }
+    .results-tab p, li, ol, ul {
+        font-size: 17px;
+    }
+    .favorites p, li, ol, ul {
+        font-size: 17px;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

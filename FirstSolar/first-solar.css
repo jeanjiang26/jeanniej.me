@@ -1,0 +1,501 @@
+
+.project-description {
+    display: flex;
+    gap: 10%;
+    flex-direction: row;
+    
+}
+.project-description p {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;  
+    color: #4a4a4a;
+    font-weight: 100;
+}
+.implementation {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;  
+    color: black;
+    font-weight: 400;
+}
+.project-description .title {
+    margin-top: 0; /* Remove any default top margin */
+    padding-top: 0; /* Remove any default top padding */
+}
+.who {
+    display: flex;
+    gap: 10%;
+}
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+#header-placeholder {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.content {
+    margin-left: 15%;
+    margin-right: 15%;
+    
+    line-height: 1.5; 
+    letter-spacing: 0.02em;
+}
+
+.vert p {
+    white-space: nowrap;
+}
+[name="hardware-pictures"] {
+    display: flex;
+    flex-direction: row; /* Arrange images in a column */
+    align-items: center; /* Center images horizontally */
+    gap: 10px; /* Adjust the gap as needed */
+    margin-left: 5%;
+     /* Increase transition duration for smoother effect */
+}
+[name="hardware-pictures"] img{
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+[name="hardware-pictures"] img:hover {
+    transform: scale(1.1); /* Scale the image to make it pop */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance the shadow effect */
+}
+
+.small-image {
+    height: auto;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2%;
+}
+.small-image3 {
+    height: auto;
+    width: 28.5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2%;
+}
+.medium-img {
+    height: auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 5%;
+}
+.csv-btn-img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+    display: block;
+}
+.save-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.save-btn-img {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    gap: 7%; /* Space between images */
+    height: 100%; /* Ensure the container takes full height of its parent */
+}
+.credits p {
+    color: #333333;
+}
+
+h2[name="Section-Title"] {
+    font-size: 2em; /* Adjust the size as needed */
+    justify-self: center;
+    
+}
+
+p[name="paragraphs"]{
+
+    /* font-size: 1.5em; Adjust the size as needed */
+    
+    color: #333333;
+    margin-right: 5%;
+    margin-left: 5%;
+
+    font-family: 'Inter', sans-serif; 
+    font-weight: 100;
+}
+
+li[name="param-list"] {
+    color: #333333;
+    margin-right: 10%;
+    margin-left: 10%;
+
+    font-family: 'Inter', sans-serif; 
+}
+
+li[name="list-items"] {
+    color: #333333;
+    margin-right: 5%;
+    margin-left: 5%;
+
+    font-family: 'Inter', sans-serif; 
+}
+.small-space {
+    margin-top: 11%;
+}
+.smaller-space {
+    margin-top: 5%;
+}
+.smallest-space {
+    margin-top: 3%;
+}
+.content ul {
+    font-size: 1.2em; /* Adjust the size as needed */
+    font-family: 'Inter', sans-serif; 
+    color: #4a4a4a;
+
+}
+.content li {
+    font-family: 'Inter', sans-serif; 
+    color: #4a4a4a;
+    font-weight: 100;
+}
+.content p {
+    font-family: 'Inter', sans-serif; 
+    font-size: 20px;
+    color: #4a4a4a;
+}
+.content ol {
+    font-family: 'Inter', sans-serif; 
+    font-size: 20px;
+    color: #4a4a4a;
+}
+
+.input-img{
+    height: auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3%;
+
+    justify-self: center; /* Center the image horizontally */
+    display: flex; /* Enable flexbox on the container */
+    justify-content: center; /* Center the image horizontally within the flex container */
+    align-items: center;
+}
+.input-parameters {
+    display: flex;
+    flex-direction: row; /* Arrange images in a column */
+    gap: 10px;
+    font-size: 20px;
+
+}
+.input-parameters ul, li {
+    font-size: 20px;
+}
+
+.parameters-img {
+    display: flex;
+    flex-direction: column; /* Arrange images in a column */
+    align-items: center; /* Center images horizontally */
+    /* gap: 25%; */
+    margin-left: 0%;
+}
+.parameters-img img{
+    display: block;
+    gap: 5%;
+    height: 30%;
+    width: auto;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Increase transition duration for smoother effect */
+    
+    /* margin-right: 0; */
+}
+
+
+.parameters-img img:hover {
+    transform: scale(1.1); /* Scale the image to make it pop */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance the shadow effect */
+}
+.input-parameters ul {
+    white-space: nowrap;
+    color: #4a4a4a;
+    
+}
+.implementation-error {
+    margin-top: -100%;
+}
+.missing-param-img{
+    border-radius: 10px; /* Add rounded corners to the image */
+    justify-self: center; /* Center the image horizontally */
+    display: flex; /* Enable flexbox on the container */
+    justify-content: center; /* Center the image horizontally within the flex container */
+    align-items: center; /* Center the image vertically within the flex container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5%;
+}
+.center-image {
+    border-radius: 10px; /* Add rounded corners to the image */
+    justify-self: center; /* Center the image horizontally */
+    display: flex; /* Enable flexbox on the container */
+    justify-content: center; /* Center the image horizontally within the flex container */
+    align-items: center; /* Center the image vertically within the flex container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5%;
+    height: auto;
+    width: 60%;
+}
+.header-img {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    border-radius: 10px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+h2[name="implementation"] {
+    font-size: 30px;
+    /* text-decoration: underline; */
+    font-family: 'Inter', sans-serif; 
+    font-weight: bold;
+    
+}
+h2[name="implementation-section"] {
+    font-size: 30px;
+    margin-left: -7%;
+    font-family: 'Inter', sans-serif; 
+    font-weight: 300;
+    text-align: center;
+    margin-left: 0;
+    text-decoration: underline;
+}
+h2[name = "implementation-error"]{
+    margin-top: -30%;
+    font-size: 30px;
+    /* text-decoration: underline; */
+    font-family: 'Inter', sans-serif; 
+    font-weight: bold;
+}
+
+.missing-param-images {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.missing-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 2%;
+    margin-left: 5%;
+
+}
+.wavelength-units {
+    display: flex;
+    gap: 7%;
+    margin-bottom: 2%;
+}
+.margin-left-5 {
+    margin-left: 5%;
+}
+.first-img {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically if needed */
+    width: 100%; /* Ensure the container spans the full width */
+}
+
+.first-img img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* footer {
+    width: 100%; 
+    position: relative; 
+    left: 0;
+    right: 0; 
+    background-color: black; 
+    color: white; 
+    padding: 20px; 
+    box-sizing: border-box; 
+} */
+@media (max-width: 450px){
+    .project-description {
+        flex-direction: column;
+    }
+    .who {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    [name="hardware-pictures"] {
+        flex-direction: column;
+        /* align-items: center; */
+        width: 90%;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .medium-img {
+        width: 90%;
+    }
+    .save-btn-img {
+        flex-direction: column;
+    }
+    .save-btn-img img {
+        width: 70%;
+    }
+}
+@media (max-width: 500px){
+    .project-description {
+        flex-direction: column;
+    }
+    .who {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    [name="hardware-pictures"] {
+        flex-direction: column;
+        /* align-items: center; */
+        width: 90%;
+    }
+    [name="hardware-pictures"] img{
+        width: 90%;
+    }
+    .center-image {
+        width: 90%;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .input-parameters {
+        flex-direction: column;
+        /* margin-left: 5%;
+        margin-right: 5%; */
+    }
+    .parameters-img img {
+        width: 90%;
+    }
+    .parameters-img img:hover {
+        transform: none;
+        transition: none;
+    }
+    .parameters-img {
+        margin-bottom: 150px;
+    }
+    .input-img {
+        width: 90%;
+    }
+    .missing-param-img {
+        width: 90%;
+    }
+    .missing-image {
+        width: 90%;
+    }
+    .wavelength-units {
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .medium-img {
+        width: 90%;
+    }
+    .save-btn-img {
+        flex-direction: column;
+    }
+    .save-btn-img img {
+        width: 70%;
+    }
+}
+@media (max-width: 600px){
+    .project-description {
+        flex-direction: column;
+    }
+    .who {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    [name="hardware-pictures"] {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .input-parameters {
+        flex-direction: column;
+        
+    }
+    .project-description p {
+        font-size: 17px;
+    }
+    .content p, ul, li, ol {
+        font-size: 17px;
+    }
+    .medium-img {
+        width: 90%;
+    }
+    .save-btn-img {
+        flex-direction: column;
+    }
+    .save-btn-img img {
+        width: 70%;
+    }
+}
+@media (max-width: 850px){
+    .project-description {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .input-parameters {
+        flex-direction: column;
+        /* margin-bottom: 200px; */
+    }
+    .input-parameters img:nth-of-type(1) {
+        width: 50%;
+    }
+    .input-parameters img:nth-of-type(2) {
+        width: 90%;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .project-description {
+        flex-direction: column;
+    }
+    .project-description h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .input-parameters {
+        flex-direction: column;
+        margin-bottom: 400px;
+    }
+}

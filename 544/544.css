@@ -1,0 +1,22 @@
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: gray;
+}
+#loading {
+    border-right: 2px solid gray; /* Cursor effect */
+    white-space: nowrap; /* Prevent text wrapping */
+    display: inline-block; /* Keep proper element size */
+    animation: blink-caret 0.75s step-end infinite;
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+.content {
+    margin-left: 5%;
+    margin-right: 5%;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeannie | Weather App 2</title>
+    <link rel="stylesheet" href="weather2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Bebas+Neue&family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../J.jpg" type="image/x-icon">
+    
+</head>
+
+<body>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="../header-footer/header-menu.js"></script>
+
+    <div id="header-placeholder"></div>
+    
+    <div class="content">
+        
+
+        <div class="project-description">
+            <h3 class="title">Weather Search</h3>
+
+            <!--be vertical-->
+            <div class="credits">
+                
+                
+
+                <p>This project involved building a responsive web application that allows users to search for and view detailed weather forecasts. </p>
+                <p>Utilizing technologies like <strong>Angular, Node.js, and Bootstrap</strong>, the app integrates multiple APIs, including Tomorrow.io, Google Geocoding, and IPInfo, to deliver real-time weather data and intuitive visualizations. The app features dynamic form validation, autocomplete functionality, interactive charts, and a seamless user experience across devices.</p>
+
+                <p>Through this project, I deepened my understanding of <strong>front-end and back-end integration, AJAX and JSON data handling, and deploying full-stack applications on cloud platforms like Google Cloud </strong>. Additionally, I enhanced my skills in responsive web design, API integration, and database management using MongoDB Atlas.</p>
+            
+                <p>Request access for source code!</p>
+
+                <!--row-->
+                <div class="who">
+                    <div class="vert">
+                        <p><strong style="color: black;">WHO: </strong></p>
+                        <p>Me!</p>
+
+                    </div>
+                    <div class="vert">
+                        <p><strong style="color: black;"">WHEN: </strong></p>
+                        <p>Fall 2024</p>
+
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class ="intro">
+
+            <h4><strong>Key Features:</strong></h4>
+            
+            <!-- <p><strong>Key Features:</strong></p> -->
+            <ol>
+                <li>Location Input Options</li>
+                <ul>
+                    <li>Users can search for weather information by entering a street address, city, and/or state.</li>
+                    <li>Alternatively, the application supports detecting the user’s current location for weather lookup.</li>
+                </ul>
+                <li>Real-Time Input Validation</li>
+                <ul>
+                    <li>Dynamic validation ensures all form fields are validated in real time, providing immediate feedback on input errors without waiting for the form submission.</li>
+                </ul>
+                <li>Dynamic Results Display</li>
+                <ul>
+                    <li>After performing a search, the results pane displays detailed weather information across three tabs: Day View, Daily Temperature Chart, Meteogram</li>
+                    <li>A progress bar indicates activity while results are being fetched.</li>
+                </ul>
+                <li>Error Handling</li>
+                <ul>
+                    <li>Clear and user-friendly error messages are shown when invalid responses are received from the API.</li>
+                </ul>
+                <li>Favorites Management</li>
+                <ul>
+                    <li>Users can save and manage a list of favorite cities for quick access.</li>
+                </ul>
+                <li>Social Sharing</li>
+                <ul>
+                    <li>A "Tweet" button is included to allow users to share weather details on Twitter directly from the application.</li>
+                </ul>
+            </ol>
+            <p>This project highlights my skills in API integration, responsive design, and building interactive and user-centric web applications.</p>
+
+
+            
+
+        </div>
+
+        <div class="gap"></div>
+
+        <div class="initial-landing">
+            <h3><strong>Initial Landing Page</strong></h3>
+            <img src="initial.jpeg" alt="Landing Page">
+
+            <p>I implemented the search form using Bootstrap to enhance the user experience and visual appeal, deviating from standard HTML controls. The form includes the following required fields when the "Current Location" checkbox is unchecked:</p>
+            <li><strong>Street:</strong> An input field that starts blank, allowing users to enter their street address.</li>
+            <li><strong>City:</strong> An input field with autocomplete functionality that offers suggestions as the user types, though selecting from the suggestions is optional. This field is also initially blank.</li>
+            <li><strong>State:</strong> A dropdown menu containing all U.S. states, enabling users to select their state from a predefined list.</li>
+
+            <img src ="state.jpeg" alt="State Dropdown">
+            <p>Search form contains 2 buttons:</p>
+            <ol>
+                <li><strong>Search Button:</strong> The "Search" button will remain disabled until all required fields are filled, validation passes, and the user's location is successfully retrieved. </li>
+                <li><strong>Clear Button:</strong> The "Clear" button resets the form fields, removes any validation errors, navigates to the Results tab, and clears the results display area.</li>
+            </ol>
+            <p>The autocomplete functionality for the City field is powered by the Google Places Autocomplete API service and implemented using Angular material.</p>
+            <img src="dropdown.jpeg" alt="Dropdown">
+            <p>The form validates the "Street" and "City" fields to ensure they are not empty or filled with only spaces. If the input is invalid, an error message is displayed.</p>
+            <p>Additionally, selecting the "Current Location" checkbox disables the "Street," "City," and "State" fields while keeping their existing values intact.</p>
+
+        
+            <p>If user decides to use autodetect location, the website obtains their location using IPInfo API.</p>
+
+            <p>When the "Search" button is clicked and validation is successful, the application sends an AJAX request to a Node.js script hosted on Google Cloud. This script communicates with the Tomorrow.io API to fetch the weather data.</p>
+
+            <p>While data is being fetched, a dynamic progress bar is displayed to indicate the loading process. This feature is implemented using the progress bar component provided by Bootstrap.</p>
+            <img src="progress-bar.jpeg" alt="Progress Bar">
+        </div>
+
+        <div class="gap"></div>
+
+        <div class="results-tab">
+            <h3><strong>Display Results</strong></h3>
+            <p>The weather results are displayed below the form, designed to be fully responsive and compatible with mobile devices. The layout dynamically adjusts based on the width and height of the user’s device to ensure an optimized viewing experience on smartphones and tablets.</p>
+
+            <p>This project demonstrates how to use form inputs to construct HTTP requests to the Google Geocode API and Tomorrow.io API to fetch geolocation and weather data. The latitude and longitude are obtained from the user's current location or the Google Geocode API, then passed to the Tomorrow.io API to retrieve weather details. The results are displayed on the webpage in three interactive tabs: Day View, Daily Temperature Chart, and Meteogram, providing a clear and responsive visualization of the data.</p>
+        
+            <p><strong>1. Day View Tab</strong></p>
+            <p>The first card in the results section displays a 6-day weather forecast for the user's selected location, providing a clear and concise overview of the upcoming weather conditions. This card is shown before the Daily Temperature Chart and Meteogram tabs.</p>
+            <img src="day-view.jpeg" alt="Day View Tab">
+
+            <p><strong>2. Daily Temperature Chart Tab</strong></p>
+            <p>The next tab displays a range graph showcasing the minimum and maximum daily temperatures for the selected location over the next 15 days, providing a detailed visual representation of temperature trends.</p>
+            <img src="temp-chart.jpeg" alt="Daily Temperature Chart Tab">
+
+            <p><strong>3. Meteogram Tab</strong></p>
+            <p>The Meteogram tab features an hourly-based plot that spans from the current time to the next 5 days, offering a detailed visualization of weather patterns over time.</p>
+            <img src="meteogram.jpeg" alt="Meteogram Tab">
+        </div>
+
+        <div class="gap"></div>
+
+        <div class="Details-Pane">
+
+            <h3><strong>Details Pane</strong></h3>
+            <p>Clicking on a row in the results table opens a new pane with detailed weather information for the selected day, displayed with a smooth "slide" transition. The details pane includes a simple table showing additional data from the Tomorrow.io API and features an interactive Google Map centered on the latitude and longitude used in the API query (obtained from IPinfo or the Google Geocode API).</p>
+            <img src="details-pane.jpeg" alt="Details Pane">
+            <p>The "Tweet" button lets users compose and share a weather update on X. Clicking the button opens a dialog displaying a pre-filled tweet in the following format:  
+                “The temperature in (City, State) on (Day of Week, Date) is (Temperature). The weather conditions are (Summary) #CSCI571WeatherSearch”.</p>
+        
+            <img src="tweet.jpeg" alt="Tweet Button">
+        </div>
+
+        <div class="gap"></div>
+
+        <div class="favorites">
+            <h3><strong>Favorites Functionality</strong></h3>
+            <p>The Favorites tab displays a list of favorite cities in a table format, with the data stored and loaded from MongoDB Atlas (only storing the City and State). Users can click on a city name in the "City" column to fetch its weather details, while the "Trashcan" icon in the "Favorites" column allows them to remove a city from the list dynamically.</p>
+            <img src="fav.jpeg" alt="Favorites Tab">
+            <p>The Favorites tab retains its data even if the user closes and reopens the browser, as the favorite cities are stored in MongoDB Atlas. If no cities are in the favorites list, a message saying *"Sorry! No records found."* is displayed to inform the user.</p>
+            <img src="no-fav.jpeg"alt = "No Favorites">
+
+            <p>If an error occurs due to a location issue or exceeding the API usage limit, an appropriate error message is displayed to the user. This ensures clear communication about the problem and enhances the user experience.</p>
+            <img src="error.jpeg" alt="Error Message">
+        </div>
+
+        <div class="gap"></div>
+
+        <div class="Mobile">
+            <p>This project is fully optimized for mobile devices. Features and layouts adapt dynamically to different screen sizes, providing a consistent and user-friendly experience on both mobile and desktop environments.</p>
+        
+        </div>
+   
+    </div>
+    
+    <script src="../Dock/toolbar.js" defer></script>
+    <div class="smallest-space" style="margin-top: 3%;"></div>
+    <div id="toolbar-container"></div>
+    
+    <div class = "footer">
+        <div class="footer-row">
+            <!--Column 1-->
+            <div class="footer-column1">
+                <h1><strong>Jeannie Jiang ✨</strong></h1>
+                <p>Developed by me in HTML/CSS + JS 👩🏻‍💻</p> <!--fix this spacing-->
+            </div>
+
+            <!--need arrows when hover-->
+            <div class="footer-column">
+                <p><a href="mailto:jeanniej@usc.edu">Email Me.</a></p>
+                <p><a href="https://www.linkedin.com/in/jeanjiang26/" target="_blank">Connect on LinkedIn.</a></p>
+                <p><a href="../Jeannie_Jiang_Resume.pdf" target="_blank">Download My Resume.</a></p>
+                <p><a href="https://github.com/jeanjiang26" target="_blank">View My GitHub.</a></p>
+                <p><a href="https://www.instagram.com/__jeanjiang26" target="_blank">Visit my Instagram.</a></p>
+            </div>
+
+            <!--cross out when hover-->
+            <div class="footer-column">
+                <p><a href="/../index.html">Home.</a></p>
+                <p><a href="../index.html#projects">Projects.</a></p>
+                <p><a href="../Other/other-work.html">Other Work.</a></p>
+                <p><a href="../About/about.html">About Me.</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

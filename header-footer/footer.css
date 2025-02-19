@@ -1,0 +1,58 @@
+.footer { 
+    width: 100vw; /* Set width to 100% of the viewport width */
+    margin: 0; /* Remove default margins */
+    padding: 20px 0; 
+    background-color: black;
+    display: flex;
+    color: white !important; /* Ensure text color is white */
+    justify-content: center; 
+    font-family:'Times New Roman', Times, serif !important; /* Use Times New Roman font */
+    box-sizing: border-box; /* Include padding in the width */
+    position: relative; /* Ensure proper positioning */
+    left: 50%; /* Move to the center of the viewport */
+    transform: translateX(-50%);
+    width: 100%; 
+    flex-wrap: wrap;
+}
+
+.footer-row {
+    display: flex;
+    background-color: black;
+    justify-content: space-between; /* Add space between columns */
+    align-items: center; /* Center the columns vertically */
+    color: white !important; /* Ensure text color is white */
+    flex-wrap: nowrap; /* Prevent columns from wrapping */
+    max-width: 1200px; /* Adjust max-width as needed */
+    width: 100%;
+    padding: 0 20px; /* Adjust padding as needed */
+    margin: 0 auto; /* Center the row */
+}
+
+
+.footer-column1, .footer-column {
+    flex: 1;
+    padding: 10px; /* Adjust padding as needed */
+    text-align: center; /* Center text within each column */
+    color: white !important; /* Ensure text color is white */
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: white !important; /* Ensure link color is white */
+}
+
+.footer-column a:hover {
+    text-decoration: line-through; /* Add underline on hover */
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 600px) {
+    .footer-row {
+        flex-direction: column;
+    }
+    .footer-column1, .footer-column {
+        font-size: 0.8em; 
+    }
+}

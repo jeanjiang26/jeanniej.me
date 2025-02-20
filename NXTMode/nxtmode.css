@@ -135,7 +135,7 @@ content p, ul, li, ol{
         margin-right: 5%;
     }
 }
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
     .project-description {
         flex-direction: column;
     }

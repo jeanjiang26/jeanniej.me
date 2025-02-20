@@ -157,3 +157,6 @@ content p, ul, li, ol{
         margin-right: 5%;
     }
 }
+.footer {
+    font-weight: 300;
+}

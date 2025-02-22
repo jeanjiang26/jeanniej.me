@@ -33,6 +33,11 @@
     /* flex-shrink: 0; 
     flex-grow: 0;  */
 }
+@media (max-width: 500){
+    .category p {
+        font-size: 15px;
+    }
+}
 @media (max-width: 600px) {
     .row {
         flex-direction: column; /* Stack items vertically */
@@ -48,6 +53,9 @@
     }
     .write_space {
         display: none;
+    }
+    .category p {
+        font-size: 15px;
     }
  
 }
@@ -74,7 +82,7 @@
 .category p{
     font-family: 'DM Serif Text', serif;
     /* font-size: 1.5vw; */
-    font-size: 15px;
+    font-size: 20px;
     /* white-space: nowrap; */
     font-weight: 100;
     white-space: wrap;

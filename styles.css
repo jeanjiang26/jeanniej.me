@@ -173,9 +173,11 @@ body {
     .project-link {
         padding: 5px 10px; /* Make the buttons smaller */
         font-size: 0.875em; /* Adjust font size for smaller screens */
+        
     }
     .back-to-top {
         font-size: 1em;
+        
     }
     .footer-row {
         flex-direction: column;
@@ -333,6 +335,9 @@ body {
     
     
 }
+/* .project-links a{
+    font-family: 'Inter', sans-serif;
+} */
 .project-link {
     display: inline-block;
     padding: 10px 20px;

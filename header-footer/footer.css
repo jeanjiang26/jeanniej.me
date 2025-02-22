@@ -6,7 +6,8 @@
     display: flex;
     color: white !important; /* Ensure text color is white */
     justify-content: center; 
-    font-family:'Times New Roman', Times, serif !important; /* Use Times New Roman font */
+    /* font-family: 'Inter', sans-serif; */
+    font-family:'Times New Roman', Times, serif !important; 
     box-sizing: border-box; /* Include padding in the width */
     position: relative; /* Ensure proper positioning */
     left: 50%; /* Move to the center of the viewport */

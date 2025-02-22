@@ -51,13 +51,17 @@ body {
     text-decoration: none;
     font-weight: bold; 
     margin-right: 15px; 
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 .header-links a:hover {
     color: darkgray; 
 }
 .view {
     font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Inter', sans-serif;
+    font-weight: 100; */
     text-decoration: underline; /* Add underline to the text */
     cursor: pointer; 
 }
@@ -86,7 +90,9 @@ body {
 }
 .intro{
     max-width: 50%;
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
 }
 
 @media (max-width: 600px) {
@@ -299,7 +305,9 @@ body {
 }
 .project-description p {
     font-size: 20px;
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
 }
 .back-to-top {
     text-align: center;

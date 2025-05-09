@@ -1,6 +1,4 @@
-✨ Purpose:
-
-The goal of this project is to strengthen my understanding of core front-end development principles without relying on frameworks or libraries. By working directly with vanilla HTML, CSS, and JavaScript, I’m focusing on:
+✨ Purpose: The goal of this project is to strengthen my understanding of core front-end development principles without relying on frameworks or libraries. By working directly with vanilla HTML, CSS, and JavaScript, I’m focusing on:
 
 Semantic HTML structure
 
